@@ -1,6 +1,7 @@
 package pakage1;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 
@@ -10,12 +11,21 @@ public class Alumno {
 	private String ano;
 	private List<Materia> materias;
 
-public Alumno (String n, String ape, String a, String m){
-	this.nombre = n;
-	this.apellido = ape;
-	this.ano = a;
+	public Alumno(String nombre, String apellido, String ano, List<Materia> materias) {
+		
+		this.nombre = nombre;
+		this.apellido = apellido;
+		this.ano = ano;
+		this.materias = materias;
+	}
 
-}
+public List<Materia> getMaterias() {
+		return materias;
+	}
+
+	public void setMaterias(List<Materia> materias) {
+		this.materias = materias;
+	}
 
 public String getNombre() {
 	return nombre;
@@ -41,6 +51,10 @@ public void setAno(String a) {
 	this.ano = a;
 }
 
-
+public void imprimirMaterias() {
+	for (Materia materia : materias) {
+		System.out.println(materia.getNombre());
+	}
+}
 
 }
