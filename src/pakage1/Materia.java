@@ -1,14 +1,24 @@
 package pakage1;
 
 public class Materia {
+	private int legajo;
 	private String nombre;
 	private String profesor;
 	private int nota;
 	
-public Materia (String n, String pro, int not) {
+public Materia (int l, String n, String pro, int not) {
+	this.legajo = l;
 	this.nombre = n;
 	this.profesor = pro;
 	this.nota = not;
+}
+
+public int getLegajo() {
+	return legajo;
+}
+
+public void setLegajo(int legajo) {
+	this.legajo = legajo;
 }
 
 public String getNombre() {
